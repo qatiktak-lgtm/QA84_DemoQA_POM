@@ -17,4 +17,6 @@ public class SidePanel extends BasePage {
         click(loginLink);
         return new LoginPage(driver);
     }
+
+
 }
