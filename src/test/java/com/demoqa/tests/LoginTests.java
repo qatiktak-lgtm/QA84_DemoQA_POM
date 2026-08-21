@@ -19,7 +19,7 @@ public class LoginTests extends TestBase {
 
     @Test
     public void loginPositiveTest() {
-        new LoginPage(driver).enterUserDate("Ark", "Aa123456!d"))
+        new LoginPage(driver).enterUserDate("Ark", "Aa123456!d")
                 .clickOnLoginButton()
                 .verifyUserName("Ark");
     }
