@@ -21,6 +21,7 @@ public class AlertsPage extends BasePage {
 
     @FindBy(id = "confirmButton")
     WebElement confirmButton;
+
     public AlertsPage clickOnResult(String result) {
         clickWithJS(confirmButton,0,200);
         if (result != null && result.equals("Ok")){

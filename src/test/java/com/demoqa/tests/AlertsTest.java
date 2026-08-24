@@ -29,8 +29,8 @@ public class AlertsTest extends TestBase {
     @Test
     public void alertWithSelectResult(){
         sidePanel.getAlerts();
-        alerts.clickOnResult("Cancel")
-                .verifyResult("Cancel");
+        alerts.clickOnResult("Ok")
+                .verifyResult("Ok");
 
     }
 }
