@@ -13,8 +13,6 @@ public class LoginTests extends TestBase {
     public void precondition() {
         new HomePage(driver).getBookStore();
         new SidePanel(driver).getLogin();
-
-
     }
 
     @Test

@@ -7,14 +7,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class AlertsPage extends BasePage {
-    public AlertsPage(WebDriver driver){
+    public AlertsPage(WebDriver driver) {
         super(driver);
     }
-    @FindBy(id ="timerAlertButton")
+
+    @FindBy(id = "timerAlertButton")
     WebElement timerAlertButton;
 
     public AlertsPage verifyAlertWithTimer() {
-        clickWithJS(timerAlertButton,0,200);
+        clickWithJS(timerAlertButton, 0, 200);
         Assertions.assertTrue(isAlertPresent(5));
         return this;
     }
@@ -23,10 +24,10 @@ public class AlertsPage extends BasePage {
     WebElement confirmButton;
 
     public AlertsPage clickOnResult(String result) {
-        clickWithJS(confirmButton,0,200);
-        if (result != null && result.equals("Ok")){
+        clickWithJS(confirmButton, 0, 200);
+        if (result != null && result.equals("Ok")) {
             driver.switchTo().alert().accept();// accept ->OK
-        }else if (result != null && result.equals("Cancel")){
+        } else if (result != null && result.equals("Cancel")) {
             driver.switchTo().alert().dismiss();//dismiss ->same cancel
         }
         return this;
@@ -36,6 +37,28 @@ public class AlertsPage extends BasePage {
     WebElement confirmResult;
     public AlertsPage verifyResult(String text) {
         Assertions.assertTrue(isContainsText(text, confirmResult));
+        return this;
+    }
+
+    @FindBy(id = "promtButton")
+    WebElement promtButton;
+    public AlertsPage clickOnPromptButton() {
+        clickWithJS(promtButton,0,300);
+        return this;
+    }
+
+    public AlertsPage sendMessageToAlert(String message) {
+        if (message != null){
+            driver.switchTo().alert().sendKeys(message);
+            driver.switchTo().alert().accept();
+        }
+        return this;
+    }
+
+    @FindBy(id="promptResult")
+    WebElement promptResult;
+    public AlertsPage verifyMessage(String text) {
+        Assertions.assertTrue(isContainsText(text,promptResult));
         return this;
     }
 }

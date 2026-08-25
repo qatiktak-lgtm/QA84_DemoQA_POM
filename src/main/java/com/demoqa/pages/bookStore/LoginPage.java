@@ -22,7 +22,7 @@ public class LoginPage extends BasePage {
         return this;
     }
 
-        @FindBy(id = "login")
+    @FindBy(id = "login")
     WebElement loginButton;
 
     public LoginPage clickOnLoginButton() {
