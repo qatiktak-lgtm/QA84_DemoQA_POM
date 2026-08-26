@@ -9,6 +9,7 @@ import com.demoqa.pages.bookStore.LoginPage;
 import com.demoqa.pages.widgets.MenuPage;
 import com.demoqa.pages.widgets.SelectPage;
 import com.demoqa.pages.widgets.SliderPage;
+import com.demoqa.pages.widgets.ToolTipsPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -52,22 +53,25 @@ public class SidePanel extends BasePage {
 
     @FindBy(css = "a[href='/nestedframes']")
     WebElement nestedFrames;
+
     public NestedFramesPage getNestedFrames() {
-        clickWithJS(nestedFrames,0,400);
-                return new NestedFramesPage(driver);
+        clickWithJS(nestedFrames, 0, 400);
+        return new NestedFramesPage(driver);
     }
 
     @FindBy(css = "a[href='/select-menu']")
     WebElement selectMenu;
+
     public SelectPage getSelectMenu() {
-        clickWithJS(selectMenu,0,600);
+        clickWithJS(selectMenu, 0, 600);
         return new SelectPage(driver);
     }
 
     @FindBy(css = "a[href='/menu']")
     WebElement menu;
+
     public MenuPage getMenu() {
-        clickWithJS(menu,0,550);
+        clickWithJS(menu, 0, 550);
         return new MenuPage(driver);
     }
 
@@ -75,7 +79,16 @@ public class SidePanel extends BasePage {
     WebElement slider;
 
     public SliderPage getSlider() {
-        clickWithJS(slider,0,400);
+        clickWithJS(slider, 0, 400);
         return new SliderPage(driver);
+    }
+
+
+    @FindBy(css = "a[href='/tool-tips']")
+    WebElement toolTips;
+
+    public void getToolTips() {
+        clickWithJS(toolTips, 0, 200);
+        new ToolTipsPage(driver);
     }
 }

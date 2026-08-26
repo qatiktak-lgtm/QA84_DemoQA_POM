@@ -88,4 +88,13 @@ public abstract class BasePage {
             return false;
         }
     }
+
+    public String getValue(WebElement element, String value) {
+        return element.getDomAttribute(value);
+    }
+
+
+    public void waitIsElementVisibility(WebElement element, int time) {
+        getWait(time).until(ExpectedConditions.visibilityOf(element));
+    }
 }

@@ -6,6 +6,7 @@ import com.demoqa.pages.SidePanel;
 import com.demoqa.pages.widgets.MenuPage;
 import com.demoqa.pages.widgets.SelectPage;
 import com.demoqa.pages.widgets.SliderPage;
+import com.demoqa.pages.widgets.ToolTipsPage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,44 +15,61 @@ public class WidgetsTests extends TestBase {
     SelectPage select;
 
     @BeforeEach
-    public void precondition(){
+    public void precondition() {
         sidePanel = new SidePanel(driver);
         select = new SelectPage(driver);
         new HomePage(driver).getWidgets();
 
     }
+
     @Test
-    public void oldStylesMenuTest(){
+    public void oldStylesMenuTest() {
         sidePanel.getSelectMenu();
         select.oldStyleSelect("Yellow")
                 .verifyColor();
     }
 
     @Test
-    public void multiSelectDropDownTest(){
+    public void multiSelectDropDownTest() {
         sidePanel.getSelectMenu();
-        select.multiSelect(new String[]{"Green","Red"})
-                .verifyMultiSelect(new String[]{"Green","Red"});
+        select.multiSelect(new String[]{"Green", "Red"})
+                .verifyMultiSelect(new String[]{"Green", "Red"});
     }
 
     @Test
-    public void standartMultiSelectTest(){
+    public void standartMultiSelectTest() {
         sidePanel.getSelectMenu();
-        select.verifySelectedCar("opel","rgba(25, 103, 210, 1)");
+        select.verifySelectedCar("opel", "rgba(25, 103, 210, 1)");
     }
 
     @Test
-    public void hoverMouseOnMenuTest(){
+    public void hoverMouseOnMenuTest() {
         sidePanel.getMenu();
         new MenuPage(driver).hoverMouseOnMenu()
                 .verifySubMenu();
     }
 
     @Test
-    public void sliderTest(){
+    public void sliderTest() {
         sidePanel.getSlider();
         new SliderPage(driver).moveSlider()
                 .verifySliderValue("100");
     }
+
+    @Test
+    public void sliderTestTo() {
+        sidePanel.getSlider();
+        new SliderPage(driver)
+                .moveSliderTo(72)
+                .verifySliderValue("72");
+    }
+
+    @Test
+    public void toolTipsTest(){
+        sidePanel.getToolTips();
+        new ToolTipsPage(driver).hoversOnToolTips()
+                .verifyToolTips("buttonToolTip");
+    }
+
 
 }
