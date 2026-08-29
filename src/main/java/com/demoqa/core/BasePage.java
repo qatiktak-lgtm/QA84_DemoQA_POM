@@ -1,13 +1,16 @@
 package com.demoqa.core;
 
 import org.assertj.core.api.SoftAssertions;
-import org.jspecify.annotations.NonNull;
+import com.demoqa.utils.LoggerWriter;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.time.Duration;
 
 public abstract class BasePage {
@@ -15,6 +18,7 @@ public abstract class BasePage {
     public static JavascriptExecutor js;
     public static SoftAssertions softly;
     public static Actions actions;
+
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -97,4 +101,56 @@ public abstract class BasePage {
     public void waitIsElementVisibility(WebElement element, int time) {
         getWait(time).until(ExpectedConditions.visibilityOf(element));
     }
+
+    public void verifyLinks(String url){
+
+        try {
+            URL linkUrl = new URL(url);
+            //create URL connection and get response code
+            HttpURLConnection connection = (HttpURLConnection) linkUrl.openConnection();
+            connection.setConnectTimeout(5000);
+            connection.connect();
+            int statusCode = connection.getResponseCode();
+            if (statusCode >=400){
+                // System.out.println(url + " --> " + connection.getResponseMessage() + " is a BROKEN links");
+                softly.fail(url + " --> " + connection.getResponseMessage() + " is a BROKEN links");
+            }else {
+                //System.out.println(url + " --> " + connection.getResponseMessage());
+                softly.assertThat(statusCode).isLessThan(400);
+            }
+        } catch (Exception e) {
+            //System.out.println(url + " --> " + "ERROR occurred");
+            softly.fail(url + " --> " + "ERROR occurred");
+        }
+    }
+    public void clickWithRectangle(WebElement element){
+        Rectangle rectangle = element.getRect();
+
+        int xOffset = rectangle.getWidth() / 4;
+        int yOffset = rectangle.getHeight() / 3;
+/*
+две главные проблемы в исходном коде:
+- yOffset = height/2 сдвигает курсор точно на границу элемента, а не внутрь него — может промахнуться.
+- Разделение на два .perform() с одним и тем же actions рискует повторно выполнить ранее добавленные
+действия (зависит от версии Selenium) и накапливать состояние, если actions — переиспользуемое поле класса.
+Koд от Кристины:
+//        actions.moveToElement(element).perform();
+//        actions.moveByOffset(-xOffset,-yOffset).click().perform();
+
+ */
+        new Actions(driver)
+                .moveToElement(element)
+                .moveByOffset(-xOffset, -yOffset)
+                .click()
+                .perform();
+    }
+
+    public void pause(int millis){
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }

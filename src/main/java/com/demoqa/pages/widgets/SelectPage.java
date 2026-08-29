@@ -21,10 +21,16 @@ public class SelectPage extends BasePage {
         new Select(oldSelectMenu).selectByVisibleText(color);
         return this;
     }
+// Метод только проверяет наличие текста в первом выбранном опшене
+//    public SelectPage verifyColor() {
+//        Assertions.assertTrue(shouldHaveText(oldSelectMenu, new Select(oldSelectMenu)
+//                .getFirstSelectedOption().getText(), 5));
+//        return this;
+//    }
 
-    public SelectPage verifyColor() {
-        Assertions.assertTrue(shouldHaveText(oldSelectMenu, new Select(oldSelectMenu)
-                .getFirstSelectedOption().getText(), 5));
+    public SelectPage verifyColor(String expectedColor) {
+        String actualColor = new Select(oldSelectMenu).getFirstSelectedOption().getText();
+        Assertions.assertEquals(actualColor, expectedColor, "Selected text: '" + actualColor + "', expected: '" + expectedColor + "'");
         return this;
     }
 

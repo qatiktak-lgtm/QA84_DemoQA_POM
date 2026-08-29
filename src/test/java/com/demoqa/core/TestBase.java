@@ -1,29 +1,26 @@
 package com.demoqa.core;
 
+import com.demoqa.utils.LoggerWriter;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
+@ExtendWith(LoggerWriter.class)
 
 public class TestBase {
     protected WebDriver driver;
+    protected WebDriverWait wait;
+    protected ApplicationManager app = new ApplicationManager(System.getProperty("browser","chrome"));
 
     @BeforeEach
     public void init(){
-        driver = new ChromeDriver();
-        driver.get("https://demoqa.com/");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver = app.start();
     }
-
 
     @AfterEach
-    public void tearDown(){
-        if (driver!=null){
-            driver.quit();
-        }
+    public void tearDown() {
+        driver = app.stop();
     }
-
 }

@@ -26,7 +26,7 @@ public class WidgetsTests extends TestBase {
     public void oldStylesMenuTest() {
         sidePanel.getSelectMenu();
         select.oldStyleSelect("Yellow")
-                .verifyColor();
+                .verifyColor("Yellow");
     }
 
     @Test

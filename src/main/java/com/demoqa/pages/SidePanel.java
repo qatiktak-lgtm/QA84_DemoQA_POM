@@ -6,6 +6,10 @@ import com.demoqa.pages.alertsFrameWindows.FramesPage;
 import com.demoqa.pages.alertsFrameWindows.NestedFramesPage;
 import com.demoqa.pages.alertsFrameWindows.WindowsPage;
 import com.demoqa.pages.bookStore.LoginPage;
+import com.demoqa.pages.elements.BrokenLinksImagesPage;
+import com.demoqa.pages.elements.ButtonPage;
+import com.demoqa.pages.elements.TextBoxPage;
+import com.demoqa.pages.elements.UploadPage;
 import com.demoqa.pages.widgets.MenuPage;
 import com.demoqa.pages.widgets.SelectPage;
 import com.demoqa.pages.widgets.SliderPage;
@@ -90,5 +94,36 @@ public class SidePanel extends BasePage {
     public void getToolTips() {
         clickWithJS(toolTips, 0, 200);
         new ToolTipsPage(driver);
+    }
+
+    @FindBy(css="a[href='/buttons']")
+    WebElement buttons;
+
+    public ButtonPage getButtons() {
+        clickWithJS(buttons,0,400);
+        return new ButtonPage(driver);
+    }
+
+
+    @FindBy(css = "a[href='/text-box']")
+    WebElement textBox;
+    public TextBoxPage getTextBox() {
+        clickWithJS(textBox, 0, 100);
+        return new TextBoxPage(driver);
+    }
+
+    @FindBy(css = "a[href='/broken']" )
+    WebElement broken;
+    public BrokenLinksImagesPage getBrokenLinkImages() {
+        clickWithJS(broken,0,500);
+        return new BrokenLinksImagesPage(driver);
+    }
+
+    @FindBy(css="a[href='/upload-download']")
+    WebElement uploads;
+
+    public UploadPage getUpload() {
+        clickWithJS(uploads,0,600);
+        return new UploadPage(driver);
     }
 }
