@@ -44,7 +44,6 @@ public class ApplicationManager {
         LoggerWriter.logInfo("~~~~~~~~~~~~~~~~~ The test has started ~~~~~~~~~~~~~~~~~~ ");
         LoggerWriter.logInfo(startTime);
 
-        driver = new ChromeDriver();
         WebDriverListener listener = new MyListener(driver);
         driver = new EventFiringDecorator<>(listener).decorate(driver);
 

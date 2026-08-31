@@ -4,8 +4,6 @@ import com.demoqa.utils.LoggerWriter;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
-//import org.junit.platform.commons.logging.Logger;
-//import org.junit.platform.commons.logging.LoggerFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -19,13 +17,20 @@ public class TestBase {
     protected ApplicationManager app = new ApplicationManager(System.getProperty("browser","chrome"));
     public static final Logger logger = LoggerFactory.getLogger(TestBase.class);
 
+    public static final ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<>();
+
     @BeforeEach
     public void init(){
         driver = app.start();
+        threadLocalDriver.set(driver);
+        logger.info("✅ WebDriver initialized and stored in ThreadLocal");
     }
 
     @AfterEach
     public void tearDown() {
+        WebDriver tempDriver = driver;
         driver = app.stop();
+        threadLocalDriver.remove();
+        logger.info("✅ WebDriver cleaned up");
     }
 }
