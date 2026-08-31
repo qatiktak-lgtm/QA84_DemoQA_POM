@@ -1,96 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <!-- ===== ПЕРЕМЕННЫЕ ===== -->
-    <timestamp key="bySecond" datePattern="yyyy-MM-dd_HHmmss"/>
-    <property name="LOG_DIR" value="target/logs"/>
-    <property name="LOG_FILE_NAME" value="test-${bySecond}"/>
 
-    <!-- ===== КОНСОЛЬ (цвета для удобства) ===== -->
+    <timestamp key="bySecond" datePattern="dd'T'HHmmss"/>
+
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <target>System.out</target>
-        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <pattern>
-                %cyan([%t]) %magenta(%logger{36})  %d{HH:mm:ss.SSS} [%relative{HH:mm:ss.SSS} ms] %highlight(%-5level)  %msg%n
-
-            </pattern>
-            <charset>UTF-8</charset>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%kvp- %msg%n</pattern>
         </encoder>
     </appender>
 
-    <!-- ===== ФАЙЛ ЛОГОВ (ГЛАВНЫЙ) ===== -->
-    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <!-- Путь к файлу -->
-        <file>${LOG_DIR}/${LOG_FILE_NAME}.log</file>
-
-        <!-- ✅ ВАЖНО: БЕЗ immediateFlush для производительности -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>src/test_logs/log-${bySecond}.log</file>
+        <append>true</append>
         <immediateFlush>true</immediateFlush>
-
-        <!-- Rolling Policy -->
-        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>
-                ${LOG_DIR}/archive/test-%d{yyyy-MM-dd}-%i.log.zip
-            </fileNamePattern>
-            <maxFileSize>50MB</maxFileSize>
-            <maxHistory>30</maxHistory>
-            <totalSizeCap>1GB</totalSizeCap>
-        </rollingPolicy>
-
-        <!-- Паттерн логирования -->
-        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <pattern>
-                %d{HH:mm:ss.SSS}
-                [%relative{HH:mm:ss.SSS}]
-                %cyan([%thread])
-                %highlight(%-5level)
-                %magenta(%logger{36})
-                [%method:%line]
-                %msg%n
-            </pattern>
-            <charset>UTF-8</charset>
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{35} -%kvp- %msg%n</pattern>
         </encoder>
     </appender>
 
-    <!-- ===== ФАЙЛ ТОЛЬКО ОШИБОК ===== -->
-    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOG_DIR}/errors-${bySecond}.log</file>
-
-        <!-- Фильтр только для ERROR -->
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>ERROR</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
-        </filter>
-
-        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>
-                ${LOG_DIR}/archive/errors-%d{yyyy-MM-dd}-%i.log.zip
-            </fileNamePattern>
-            <maxFileSize>10MB</maxFileSize>
-            <maxHistory>30</maxHistory>
-        </rollingPolicy>
-
-        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <pattern>
-                %d{yyyy-MM-dd HH:mm:ss.SSS}
-                [%thread]
-                %-5level
-                %logger{36}
-                [%method:%line]
-                %msg%n%exception{full}
-            </pattern>
-            <charset>UTF-8</charset>
-        </encoder>
-    </appender>
-
-    <!-- ===== ОТКЛЮЧИТЬ ШУМНЫЕ ЛОГИ ===== -->
-    <logger name="io.github.bonigarcia.wdm" level="WARN"/>
-    <logger name="org.apache.http" level="WARN"/>
-    <logger name="org.openqa.selenium" level="WARN"/>
-
-    <!-- ===== ROOT LOGGER (САМЫЙ ВАЖНЫЙ!) ===== -->
-    <root level="INFO">
-        <appender-ref ref="STDOUT"/>
-        <appender-ref ref="FILE"/>
-        <appender-ref ref="ERROR_FILE"/>
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
     </root>
 </configuration>

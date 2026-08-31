@@ -1,8 +1,6 @@
 package com.demoqa.core;
 
 import org.assertj.core.api.SoftAssertions;
-import com.demoqa.utils.LoggerWriter;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;

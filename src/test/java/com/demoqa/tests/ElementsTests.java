@@ -1,6 +1,5 @@
 package com.demoqa.tests;
 
-import ch.qos.logback.classic.Logger;
 import com.demoqa.core.TestBase;
 import com.demoqa.pages.HomePage;
 import com.demoqa.pages.SidePanel;
@@ -68,12 +67,15 @@ public class ElementsTests extends TestBase {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/Data84.csv")
-    public void textBoxFromCsvFileParameterTest(String name, String email, String address) {
+    public void textBoxFromCsvFileParameterTest(
+            String name,
+            String email,
+            String address) {
         sidePanel.getTextBox();
         textBox.enterPersonalData(name, email, address)
                 .clickOnSubmitButton()
                 .verifyAddress();
-        //Logger.info("TEST FOR  '{}' TEST", name);
+        logger.info("TEST FOR  '{}' TEST", name);
     }
 
     @Test
@@ -85,8 +87,7 @@ public class ElementsTests extends TestBase {
                 .verifyUrl()
                 .refreshWithJS()
                 .navigateWithJS("https://icarro-v1.netlify.app/let-car-work")
-                .verifyFaveIconTitle()
-        ;
+                .verifyFaveIconTitle();
     }
 
     @Test

@@ -17,11 +17,18 @@ public class SliderPage extends BasePage {
     public SliderPage moveSlider() {
         scrollWithJS(0,30);
         actions.dragAndDropBy(rangeSlider,450,0).perform();
-
-        //public SliderPage moveSlider() { 1 usage & KristinaTomash * // js.executeScript("arguments[0].scrollIntoView(true);", rangeSlider);oT Zolotarenko //scrollWithJS(0,30); // actions.dragAndDropBy(rangeSlider,450,0).perform(); rangeSlider.sendKeys(Keys.END);//OT Stupachenkp return this;
-
         return this;
     }
+    //oT Zolotarenko
+    // public SliderPage moveSlider() {
+    // js.executeScript("arguments[0].scrollIntoView(true);", rangeSlider);
+    // scrollWithJS(0,30);
+    // OT Stupachenkp
+    // actions.dragAndDropBy(rangeSlider,450,0).perform();
+    // rangeSlider.sendKeys(Keys.END);
+    // return this;
+    //
+
 
     @FindBy(id = "sliderValue")
     WebElement sliderValue;
