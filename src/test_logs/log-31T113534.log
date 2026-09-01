@@ -1,0 +1,22 @@
+3739 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using chromedriver 151.0.7922.138 (resolved driver for Chrome 151)
+3788 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as C:\Users\7500308\.cache\selenium\chromedriver\win64\151.0.7922.138\chromedriver.exe
+5977 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ~~~~~~~~~~~~~~~~~ The test has started ~~~~~~~~~~~~~~~~~~ 
+5977 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: 2026-08-31 11:35:40.739
+8036 [main] INFO  com.demoqa.utils.MyListener -- We opened the site https://demoqa.com/
+8209 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ✅ Browser initialized successfully
+8223 [main] INFO  com.demoqa.core.TestBase -- ✅ WebDriver initialized and stored in ThreadLocal
+15025 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: Closing browser...
+15658 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ✅ Browser closed
+15659 [main] INFO  com.demoqa.core.TestBase -- ✅ WebDriver cleaned up
+15694 [main] ERROR com.demoqa.utils.LoggerWriter -- ==================================================
+15694 [main] ERROR com.demoqa.utils.LoggerWriter -- ❌ FAILED: TEST [checkBrokenImages()] Failed!
+15695 [main] ERROR com.demoqa.utils.LoggerWriter -- Class: ElementsTests
+15696 [main] ERROR com.demoqa.utils.LoggerWriter -- Method: checkBrokenImages
+15698 [main] ERROR com.demoqa.utils.LoggerWriter -- Error Message: 
+Multiple Failures (2 failures)
+-- failure 1 --Broken image ->https://demoqa.com/images/Toolsqa.jpg
+at BrokenLinksImagesPage.checkBrokenImages(BrokenLinksImagesPage.java:64)
+-- failure 2 --Broken image ->https://demoqa.com/images/Toolsqa_1.jpg
+at BrokenLinksImagesPage.checkBrokenImages(BrokenLinksImagesPage.java:64)
+15699 [main] ERROR com.demoqa.utils.LoggerWriter -- Error Type: AssertJMultipleFailuresError
+15707 [main] ERROR com.demoqa.utils.LoggerWriter -- ==================================================

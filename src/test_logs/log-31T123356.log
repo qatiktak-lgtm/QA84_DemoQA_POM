@@ -1,0 +1,20 @@
+1425 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using chromedriver 151.0.7922.138 (resolved driver for Chrome 151)
+1498 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as C:\Users\7500308\.cache\selenium\chromedriver\win64\151.0.7922.138\chromedriver.exe
+3609 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ~~~~~~~~~~~~~~~~~ The test has started ~~~~~~~~~~~~~~~~~~ 
+3610 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: 2026-08-31 12:33:59.387
+5710 [main] INFO  com.demoqa.utils.MyListener -- We opened the site https://demoqa.com/
+5955 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ✅ Browser initialized successfully
+5963 [main] INFO  com.demoqa.core.TestBase -- ✅ WebDriver initialized and stored in ThreadLocal
+8631 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: Closing browser...
+9091 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ✅ Browser closed
+9091 [main] INFO  com.demoqa.core.TestBase -- ✅ WebDriver cleaned up
+9098 [main] ERROR com.demoqa.utils.LoggerWriter -- ==================================================
+9099 [main] ERROR com.demoqa.utils.LoggerWriter -- ❌ FAILED: TEST [checkBrokenLinksTest()] Failed!
+9099 [main] ERROR com.demoqa.utils.LoggerWriter -- Class: ElementsTests
+9099 [main] ERROR com.demoqa.utils.LoggerWriter -- Method: checkBrokenLinksTest
+9100 [main] ERROR com.demoqa.utils.LoggerWriter -- Error Message: 
+Multiple Failures (1 failure)
+-- failure 1 --http://the-internet.herokuapp.com/status_codes/500 --> Internal Server Error is a BROKEN links
+at BasePage.verifyLinks(BasePage.java:114)
+9100 [main] ERROR com.demoqa.utils.LoggerWriter -- Error Type: AssertJMultipleFailuresError
+9100 [main] ERROR com.demoqa.utils.LoggerWriter -- ==================================================

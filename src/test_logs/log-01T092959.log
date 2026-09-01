@@ -1,0 +1,23 @@
+1014 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using chromedriver 151.0.7922.138 (resolved driver for Chrome 151)
+1080 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as C:\Users\7500308\.cache\selenium\chromedriver\win64\151.0.7922.138\chromedriver.exe
+2888 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ~~~~~~~~~~~~~~~~~ The test has started ~~~~~~~~~~~~~~~~~~ 
+2889 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: 2026-09-01 09:30:02.231
+4259 [main] INFO  com.demoqa.utils.MyListener -- We opened the site https://demoqa.com/
+4494 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ✅ Browser initialized successfully
+4497 [main] INFO  com.demoqa.core.TestBase -- ✅ WebDriver initialized and stored in ThreadLocal
+8154 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: Closing browser...
+8472 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ✅ Browser closed
+8473 [main] INFO  com.demoqa.core.TestBase -- ✅ WebDriver cleaned up
+8481 [main] ERROR com.demoqa.utils.LoggerWriter -- ==================================================
+8482 [main] ERROR com.demoqa.utils.LoggerWriter -- ❌ FAILED: TEST [checkBrokenImages()] Failed!
+8482 [main] ERROR com.demoqa.utils.LoggerWriter -- Class: ElementsTests
+8483 [main] ERROR com.demoqa.utils.LoggerWriter -- Method: checkBrokenImages
+8483 [main] ERROR com.demoqa.utils.LoggerWriter -- Error Message: 
+Multiple Failures (2 failures)
+-- failure 1 --Broken image ->https://demoqa.com/images/Toolsqa.jpg
+at BrokenLinksImagesPage.checkBrokenImages(BrokenLinksImagesPage.java:64)
+-- failure 2 --Broken image ->https://demoqa.com/images/Toolsqa_1.jpg
+at BrokenLinksImagesPage.checkBrokenImages(BrokenLinksImagesPage.java:64)
+8483 [main] ERROR com.demoqa.utils.LoggerWriter -- Error Type: AssertJMultipleFailuresError
+8483 [main] ERROR com.demoqa.utils.LoggerWriter -- ==================================================
+8483 [main] WARN  com.demoqa.utils.LoggerWriter -- ⚠️ WebDriver is null - screenshot not captured

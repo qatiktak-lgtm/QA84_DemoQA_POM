@@ -1,0 +1,205 @@
+2035 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using geckodriver 0.37.1 (resolved driver for Firefox 154)
+2094 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.gecko.driver as C:\Users\7500308\.cache\selenium\geckodriver\win64\0.37.1\geckodriver.exe
+7781 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ~~~~~~~~~~~~~~~~~ The test has started ~~~~~~~~~~~~~~~~~~ 
+7784 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: 2026-08-31 12:51:06.418
+10251 [main] INFO  com.demoqa.utils.MyListener -- We opened the site https://demoqa.com/
+10632 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ✅ Browser initialized successfully
+10633 [main] INFO  com.demoqa.core.TestBase -- ✅ WebDriver initialized and stored in ThreadLocal
+12319 [main] INFO  com.demoqa.utils.MyListener -- [[FirefoxDriver: firefox on windows (3b93e227-9325-4ee2-9ce5-ddb6da820ff9)] -> css selector: body] contains Parent frame
+12320 [main] INFO  com.demoqa.utils.MyListener -- *********************************************************
+14737 [main] INFO  com.demoqa.utils.MyListener -- [[FirefoxDriver: firefox on windows (3b93e227-9325-4ee2-9ce5-ddb6da820ff9)] -> css selector: body] contains Child Iframe
+14737 [main] INFO  com.demoqa.utils.MyListener -- *********************************************************
+14773 [main] INFO  com.demoqa.utils.MyListener -- [[FirefoxDriver: firefox on windows (3b93e227-9325-4ee2-9ce5-ddb6da820ff9)] -> css selector: body] contains Child Iframe
+14774 [main] INFO  com.demoqa.utils.MyListener -- *********************************************************
+14830 [main] INFO  com.demoqa.utils.MyListener -- [[FirefoxDriver: firefox on windows (3b93e227-9325-4ee2-9ce5-ddb6da820ff9)] -> css selector: body] contains Parent frame
+14831 [main] INFO  com.demoqa.utils.MyListener -- *********************************************************
+14836 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: Closing browser...
+16360 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ✅ Browser closed
+16360 [main] INFO  com.demoqa.core.TestBase -- ✅ WebDriver cleaned up
+16367 [main] INFO  com.demoqa.utils.LoggerWriter -- ==================================================
+16367 [main] INFO  com.demoqa.utils.LoggerWriter -- ✅ PASSED: TEST [nestedFramesTest()] Successful
+16368 [main] INFO  com.demoqa.utils.LoggerWriter -- Class: AlertsTest
+16368 [main] INFO  com.demoqa.utils.LoggerWriter -- Method: nestedFramesTest
+16368 [main] INFO  com.demoqa.utils.LoggerWriter -- ==================================================
+16422 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using geckodriver 0.37.1 (resolved driver for Firefox 154)
+16512 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.gecko.driver as C:\Users\7500308\.cache\selenium\geckodriver\win64\0.37.1\geckodriver.exe
+20517 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ~~~~~~~~~~~~~~~~~ The test has started ~~~~~~~~~~~~~~~~~~ 
+20517 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: 2026-08-31 12:51:19.154
+23092 [main] INFO  com.demoqa.utils.MyListener -- We opened the site https://demoqa.com/
+23121 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ✅ Browser initialized successfully
+23122 [main] INFO  com.demoqa.core.TestBase -- ✅ WebDriver initialized and stored in ThreadLocal
+23635 [main] INFO  com.demoqa.utils.MyListener -- [[FirefoxDriver: firefox on windows (2077152c-cd0e-4d48-be93-43599fc3af54)] -> xpath: //div[@class='col-12 mt-4 col-md-6 col-xl-7']//a] contains Click Here for Valid Link
+23635 [main] INFO  com.demoqa.utils.MyListener -- *********************************************************
+23655 [main] INFO  com.demoqa.utils.MyListener -- [[FirefoxDriver: firefox on windows (2077152c-cd0e-4d48-be93-43599fc3af54)] -> xpath: //div[@class='col-12 mt-4 col-md-6 col-xl-7']//a] contains Click Here for Broken Link
+23655 [main] INFO  com.demoqa.utils.MyListener -- *********************************************************
+23656 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: Closing browser...
+25137 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ✅ Browser closed
+25138 [main] INFO  com.demoqa.core.TestBase -- ✅ WebDriver cleaned up
+25138 [main] INFO  com.demoqa.utils.LoggerWriter -- ==================================================
+25138 [main] INFO  com.demoqa.utils.LoggerWriter -- ✅ PASSED: TEST [getAllLinksTest()] Successful
+25138 [main] INFO  com.demoqa.utils.LoggerWriter -- Class: ElementsTests
+25138 [main] INFO  com.demoqa.utils.LoggerWriter -- Method: getAllLinksTest
+25138 [main] INFO  com.demoqa.utils.LoggerWriter -- ==================================================
+25177 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using geckodriver 0.37.1 (resolved driver for Firefox 154)
+25257 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.gecko.driver as C:\Users\7500308\.cache\selenium\geckodriver\win64\0.37.1\geckodriver.exe
+30020 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ~~~~~~~~~~~~~~~~~ The test has started ~~~~~~~~~~~~~~~~~~ 
+30021 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: 2026-08-31 12:51:28.657
+31978 [main] INFO  com.demoqa.utils.MyListener -- We opened the site https://demoqa.com/
+32019 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ✅ Browser initialized successfully
+32019 [main] INFO  com.demoqa.core.TestBase -- ✅ WebDriver initialized and stored in ThreadLocal
+32185 [main] ERROR com.demoqa.utils.MyListener -- The test has a problem!!!
+32187 [main] ERROR com.demoqa.utils.MyListener -- **************************
+32187 [main] ERROR com.demoqa.utils.MyListener -- Method --> findElement
+32189 [main] ERROR com.demoqa.utils.MyListener -- Target exception --> {}
+org.openqa.selenium.NoSuchElementException: Unable to locate element: a[href$='/login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.47.0', revision: '9175ed9 9175ed94d83e87cc3abeb7c9fd91367d17849d35'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [393bcd24-601f-463e-a008-5c77ae1feac9, findElement {using=css selector, value=a[href$='/login']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 154.0.1, moz:accessibilityChecks: false, moz:buildID: 20260824154132, moz:geckodriverVersion: 0.37.1, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 32664, moz:profile: C:\Users\7500308\AppData\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 393bcd24-601f-463e-a008-5c77ae1feac9
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:653)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:173)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:417)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:411)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.decorators.WebDriverDecorator.call(WebDriverDecorator.java:326)
+	at org.openqa.selenium.support.decorators.DefaultDecorated.call(DefaultDecorated.java:48)
+	at org.openqa.selenium.support.decorators.WebDriverDecorator.lambda$createProxyFactory$0(WebDriverDecorator.java:416)
+	at net.bytebuddy.renamed.java.lang.Object$ByteBuddy$rvB60wyz.findElement(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy63.click(Unknown Source)
+	at com.demoqa.core.BasePage.click(BasePage.java:45)
+	at com.demoqa.pages.SidePanel.getLogin(SidePanel.java:30)
+	at com.demoqa.tests.LoginTests.precondition(LoginTests.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:700)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:528)
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:53)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptLifecycleMethod(TimeoutExtension.java:128)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptBeforeEachMethod(TimeoutExtension.java:78)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:124)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeMethodInExtensionContext(ClassBasedTestDescriptor.java:549)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$synthesizeBeforeEachMethodAdapter$0(ClassBasedTestDescriptor.java:534)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeEachMethods$0(TestMethodTestDescriptor.java:191)
+	at org.junit.jupiter.engine.descriptor.CallbackSupport.lambda$invokeBeforeCallbacks$0(CallbackSupport.java:34)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.jupiter.engine.descriptor.CallbackSupport.invokeBeforeCallbacks(CallbackSupport.java:34)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeEachMethods(TestMethodTestDescriptor.java:189)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:153)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:139)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:139)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:139)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:256)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:228)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:189)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:109)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:168)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:137)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:126)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:100)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:57)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$0(InterceptingLauncher.java:46)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:45)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:57)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+32219 [main] ERROR com.demoqa.utils.MyListener -- Screen with error -->
+32420 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: Closing browser...
+33782 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ✅ Browser closed
+33783 [main] INFO  com.demoqa.core.TestBase -- ✅ WebDriver cleaned up
+33783 [main] ERROR com.demoqa.utils.LoggerWriter -- ==================================================
+33783 [main] ERROR com.demoqa.utils.LoggerWriter -- ❌ FAILED: TEST [loginPositiveTest()] Failed!
+33784 [main] ERROR com.demoqa.utils.LoggerWriter -- Class: LoginTests
+33784 [main] ERROR com.demoqa.utils.LoggerWriter -- Method: loginPositiveTest
+33785 [main] ERROR com.demoqa.utils.LoggerWriter -- Error Message: Unable to locate element: a[href$='/login']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.47.0', revision: '9175ed9 9175ed94d83e87cc3abeb7c9fd91367d17849d35'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [393bcd24-601f-463e-a008-5c77ae1feac9, findElement {using=css selector, value=a[href$='/login']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 154.0.1, moz:accessibilityChecks: false, moz:buildID: 20260824154132, moz:geckodriverVersion: 0.37.1, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 32664, moz:profile: C:\Users\7500308\AppData\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 393bcd24-601f-463e-a008-5c77ae1feac9
+33785 [main] ERROR com.demoqa.utils.LoggerWriter -- Error Type: NoSuchElementException
+33785 [main] ERROR com.demoqa.utils.LoggerWriter -- ==================================================
+33837 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using geckodriver 0.37.1 (resolved driver for Firefox 154)
+33939 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.gecko.driver as C:\Users\7500308\.cache\selenium\geckodriver\win64\0.37.1\geckodriver.exe
+40619 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ~~~~~~~~~~~~~~~~~ The test has started ~~~~~~~~~~~~~~~~~~ 
+40623 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: 2026-08-31 12:51:39.256
+42890 [main] INFO  com.demoqa.utils.MyListener -- We opened the site https://demoqa.com/
+42912 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ✅ Browser initialized successfully
+42912 [main] INFO  com.demoqa.core.TestBase -- ✅ WebDriver initialized and stored in ThreadLocal
+43210 [main] INFO  com.demoqa.utils.MyListener -- We cliked on [[FirefoxDriver: firefox on windows (ea725286-cbf9-4375-ab72-bd92d9751509)] -> css selector: a[href$='/widgets']]
+43211 [main] INFO  com.demoqa.utils.MyListener -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+43554 [main] INFO  com.demoqa.utils.MyListener -- [org.openqa.selenium.interactions.Sequence@7d61468c]
+43554 [main] INFO  com.demoqa.utils.MyListener -- *********************************************************
+43592 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: Closing browser...
+45101 [main] INFO  com.demoqa.utils.LoggerWriter -- ℹ️ INFO: ✅ Browser closed
+45101 [main] INFO  com.demoqa.core.TestBase -- ✅ WebDriver cleaned up
+45101 [main] ERROR com.demoqa.utils.LoggerWriter -- ==================================================
+45101 [main] ERROR com.demoqa.utils.LoggerWriter -- ❌ FAILED: TEST [toolTipsTest()] Failed!
+45102 [main] ERROR com.demoqa.utils.LoggerWriter -- Class: WidgetsTests
+45102 [main] ERROR com.demoqa.utils.LoggerWriter -- Method: toolTipsTest
+45102 [main] ERROR com.demoqa.utils.LoggerWriter -- Error Message: expected: <buttonToolTip> but was: <null>
+45102 [main] ERROR com.demoqa.utils.LoggerWriter -- Error Type: AssertionFailedError
+45102 [main] ERROR com.demoqa.utils.LoggerWriter -- ==================================================
