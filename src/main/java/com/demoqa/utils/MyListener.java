@@ -14,6 +14,8 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Collection;
 import java.util.Random;
 
@@ -31,13 +33,15 @@ public class MyListener implements WebDriverListener {
     @Override
     public void onError(Object target, Method method, Object[] args, InvocationTargetException e) {
         logger.error("The test has a problem!!!");
-        logger.error("**************************");
+        logger.error("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*");
         logger.error("Method --> {}", method.getName());
         logger.error("Target exception --> {}", e.getTargetException());
 
-        int i = new Random().nextInt(1000);
-        String link = "screenshots/screen_" + i + ".png";
-        logger.error("Screen with error -->", link);
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH:mm:ss-SSS");
+        String timestamp = now.format(formatter);
+        String link = "target/screenshots/screen_" + timestamp + ".png";
+        logger.error("Screen with error -->{}", link);
 
         File tmp = ((TakesScreenshot) driver).getScreenshotAs((OutputType.FILE));
 //        try {
@@ -47,14 +51,11 @@ public class MyListener implements WebDriverListener {
 //        }
 
         try {
-            Files.createDirectories(new File("screenshots").toPath());
-
+            Files.createDirectories(new File("target/screenshots").toPath());
             Files.copy(tmp.toPath(), new File(link).toPath());
         } catch (IOException ex) {
             logger.error("Failed to save screenshot", ex);
-
         }
-
     }
 
     @Override
@@ -70,25 +71,25 @@ public class MyListener implements WebDriverListener {
     @Override
     public void afterPerform(WebDriver driver, Collection<Sequence> actions) {
         logger.info("{}", actions);
-        logger.info("*********************************************************");
+        logger.info("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*");
     }
 
     @Override
     public void afterSendKeys(WebElement element, CharSequence... keysToSend) {
         logger.info("We enter {} to element {}", keysToSend, element);
-        logger.info("*********************************************************");
+        logger.info("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*");
 
     }
 
     @Override
     public void afterClick(WebElement element) {
         logger.info("We cliked on {}", element);
-        logger.info("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        logger.info("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*");
     }
 
     @Override
     public void afterGetText(WebElement element, String result) {
         logger.info("{} contains {}", element, result);
-        logger.info("*********************************************************");
+        logger.info("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*");
     }
 }

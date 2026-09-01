@@ -23,4 +23,14 @@ public class LoginTests extends TestBase {
                 .clickOnLoginButton()
                 .verifyUserName("Ark");
     }
+
+    @Test
+    @Tag("parameters")
+    public void loginPositiveTestWithParameters() {
+        String userName = System.getProperty("userName");
+        String password = System.getProperty("password");
+        new LoginPage(driver).enterUserDate(userName, password)
+                .clickOnLoginButton()
+                .verifyUserName(userName);
+    }
 }

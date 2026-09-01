@@ -78,16 +78,13 @@ public class LoggerWriter implements TestWatcher {
         }
     }
 
-    /**
-     * Получает WebDriver из контекста
-     */
+
     private WebDriver getWebDriver(ExtensionContext context) {
-        try {
-            return context.getStore(ExtensionContext.Namespace.create("webdriver"))
-                    .get("driver", WebDriver.class);
-        } catch (Exception e) {
-            return null;
+        WebDriver driver = DriverManager.getDriver();
+        if (driver == null) {
+            logger.warn("⚠️ WebDriver is null - screenshot not captured");
         }
+        return driver;
     }
 
     /**

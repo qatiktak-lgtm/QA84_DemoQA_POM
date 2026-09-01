@@ -20,5 +20,10 @@
     <root level="info">
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
+
+        <logger name="com.demoqa" level="info" additivity="false">
+            <appender-ref ref="STDOUT"/>
+            <appender-ref ref="FILE"/>
+        </logger>
     </root>
 </configuration>

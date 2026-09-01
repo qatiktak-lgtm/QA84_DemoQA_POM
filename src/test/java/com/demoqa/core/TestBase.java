@@ -1,5 +1,6 @@
 package com.demoqa.core;
 
+import com.demoqa.utils.DriverManager;
 import com.demoqa.utils.LoggerWriter;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -22,7 +23,7 @@ public class TestBase {
     @BeforeEach
     public void init(){
         driver = app.start();
-        threadLocalDriver.set(driver);
+        DriverManager.setDriver(driver);
         logger.info("✅ WebDriver initialized and stored in ThreadLocal");
     }
 
@@ -30,7 +31,7 @@ public class TestBase {
     public void tearDown() {
         WebDriver tempDriver = driver;
         driver = app.stop();
-        threadLocalDriver.remove();
+        DriverManager.removeDriver();
         logger.info("✅ WebDriver cleaned up");
     }
 }
